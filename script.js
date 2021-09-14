@@ -17,7 +17,7 @@ nasaApp.getPic = function(query) {
     
     url.search = new URLSearchParams({
         api_key: nasaApp.key,
-        count: 5
+        count: 8
     });
 
     // fetch the api for APOD 

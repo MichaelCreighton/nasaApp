@@ -25,13 +25,15 @@ main {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
+    gap: 20px;
     
 }
 .pic {
     border: solid red 3px;
     border-radius: 10px;
+    box-shadow: 0px 0px 20px #a7b4d1;
     padding: 20px;
+    margin: 20px;
     line-height: 1.5;
     letter-spacing: 0.5px;
     
@@ -40,7 +42,9 @@ button {
     padding: 3px 5px 2px 5px;
     font-size: 0.6rem;
     font-weight: bold;
+    box-shadow: 0px 0px 10px #a7b4d1;
     transition: 0.3s transform ease-out;
+    margin-top: 10px;
     
 }
 
