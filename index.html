@@ -7,14 +7,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet"> 
+    <!-- icons8.com  -->
+    <link rel="shortcut icon" href="./star.png" type="image/png">
     <link rel="stylesheet" href="./style.css">
     <title>NASA App</title>
 </head>
 <body>
-    <h1>Hello Universe!</h1>
+    <div class="wrapper">
+        <div> <img class="nasaLogo" src="./original.webp" alt="nasa logo"></div>
+
+        
+        <div class="input">
+            <label for="choice" class="sr-only">What would you like to see today?</label>
+            <select name="choice" id="choice">
+                <option value disabled selected>Viewers Choice</option>
+                <option value="today">Today's Picture</option>
+                <option value="rnd">Nine Random Pics</option>
+            </select>
+        </div>
+    <!-- </div> -->
     <main>
-        <div class="wrapper" id="spacePic"></div>>
+        <!-- <div class="wrapper"> -->
+            
+            <div class="gridContainer" id="spacePic">
+            </div>
+            
     </main>
+    <!-- <div class="btn">
+            <button class='nineRnd top'>Get Nine Random Pics</button>
+    </div> -->
+    </div>
 <script src="./script.js"></script>
 </body>
 </html>

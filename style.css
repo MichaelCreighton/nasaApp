@@ -12,21 +12,56 @@ body {
     font-family: 'Atkinson Hyperlegible', sans-serif;
     font-weight: normal;
     font-size: 62.5%;
+    background: #202f52;
+    color: #a7b4d1;
+    padding-top: 30px;
+}
+a {
+    color: red;
+    font-size: 1rem;
 }
 
+
 main {
-    background: #202f52;
-    color: #FFF;
-    padding: 0 0 25px;
+    
+    /* background: #202f52; */
+    position: relative;
+    color: #a7b4d1;
+    padding-top: 25px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
 }
 .wrapper {
     max-width: 1600px;
     width: 90%;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
+}
+
+/* .nineRnd .top {
+    margin: 40px 0 0 40px;
+}
+.nineRnd.bottom {
+    margin: 40px 0 40px 0px;
+} */
+.nasaLogo {
+    display: block;
+    width: 50%;
+    margin: 30px auto 50px auto;
     
+
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+
+label {
+    font-size: 1rem;
+    padding: 0 20px 20px 40px;
 }
 .pic {
     border: solid red 3px;
@@ -34,26 +69,42 @@ main {
     box-shadow: 0px 0px 20px #a7b4d1;
     padding: 20px;
     margin: 20px;
-    line-height: 1.5;
-    letter-spacing: 0.5px;
     
-}
-button {
-    padding: 3px 5px 2px 5px;
-    font-size: 0.6rem;
-    font-weight: bold;
-    box-shadow: 0px 0px 10px #a7b4d1;
-    transition: 0.3s transform ease-out;
-    margin-top: 10px;
+    /* letter-spacing: 0.5px; */
     
 }
 
+button,
+select {
+    background: #a7b4d1;
+    color: red;
+    text-align: center;
+    padding: 3px 6px 0px 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px #a7b4d1;
+    transition: 0.2s all ease-out;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 3px solid #a7b4d1;    
+}
+
+button.boom {
+    background: #000;
+}
 button:hover {
-    transform: scale(1.2);
+    border: solid 3px red;
+    background: red;
+    color: #a7b4d1;
+}
+button:active {
+    transform: scale(0.9);
 }
 .pic img {
     width: 100%;
     display: block;
-    /* border: solid 1px #FFF; */
     border-radius: 10px;
+}
+#spacePic button {
+    margin: 30px 20px;
 }
