@@ -57,6 +57,10 @@ main {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 }
+#spacePic.onePic {
+    display: grid;
+    grid-template-columns: 1fr ;
+}
 
 
 label {

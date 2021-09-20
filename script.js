@@ -99,12 +99,13 @@ nasaApp.getPics = function(query) {
             //   e.target.classList.toggle("boom");
               if (e.target.classList.contains("boom")) {
                   e.target.innerText = "YES, I LIKE THIS!";
-                  e.target.classList.toggle("boom");
+                //   e.target.classList.toggle("boom");
               } else {
                 e.target.innerText = "NO, I DON'T LIKE THIS!";
-                e.target.classList.toggle("boom");
+                // e.target.classList.toggle("boom");
             }
-              })
+            e.target.classList.toggle("boom");
+        })
             );
     }
 
@@ -124,6 +125,7 @@ nasaApp.getPics = function(query) {
       // clear the html for new pics
       const clearHtml = document.querySelector("#spacePic");
       clearHtml.innerHTML = "";
+        document.getElementById('spacePic').classList.add('onePic');
 
       this.displayAnything(picObject);
     }
@@ -135,7 +137,7 @@ nasaApp.displayPics = function(arrayOfPicObjects) {
     // clear the html for new pics
     const clearHtml = document.querySelector('#spacePic');
     clearHtml.innerHTML = '';
-
+    document.getElementById("spacePic").classList.remove("onePic");
     // working with array of objects [{}, {}, {}]
     arrayOfPicObjects.forEach(picObject => {
         this.displayAnything(picObject);
