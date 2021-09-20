@@ -20,6 +20,11 @@ a {
     color: red;
     font-size: 1rem;
 }
+h3 {
+    font-size: 2rem;
+    margin: 40px 0 0 20px;
+    color: red;
+}
 
 
 main {
@@ -38,12 +43,7 @@ main {
     margin: 0 auto;
 }
 
-/* .nineRnd .top {
-    margin: 40px 0 0 40px;
-}
-.nineRnd.bottom {
-    margin: 40px 0 40px 0px;
-} */
+
 .nasaLogo {
     display: block;
     width: 50%;
@@ -68,10 +68,7 @@ label {
     border-radius: 10px;
     box-shadow: 0px 0px 20px #a7b4d1;
     padding: 20px;
-    margin: 20px;
-    
-    /* letter-spacing: 0.5px; */
-    
+    margin: 20px;    
 }
 
 button,
@@ -83,28 +80,32 @@ select {
     font-size: 1rem;
     font-weight: bold;
     box-shadow: 0px 0px 10px #a7b4d1;
-    transition: 0.2s all ease-out;
-    margin: 10px 0;
     border-radius: 10px;
     border: 3px solid #a7b4d1;    
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 button.boom {
     background: #000;
 }
+
 button:hover {
     border: solid 3px red;
     background: red;
     color: #a7b4d1;
 }
 button:active {
-    transform: scale(0.9);
+    transform:  scale(1.4);
 }
 .pic img {
     width: 100%;
     display: block;
     border-radius: 10px;
 }
+pic i {
+    font-size: 1rem;
+    color: #a7b4d1;
+}
 #spacePic button {
-    margin: 30px 20px;
+    margin: 10px 20px;
 }
