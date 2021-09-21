@@ -39,6 +39,8 @@ nasaApp.getPics = function(query) {
 
 
 nasaApp.displayAnything = function(picObject) {
+    const clearLanding = document.querySelector('#landingLogo');
+    clearLanding.innerHTML = "";
 
     const title = document.createElement("h2");
     title.innerText = picObject.title;
@@ -154,6 +156,7 @@ nasaApp.setEventListeners = function () {
 
 nasaApp.init = function () {
     nasaApp.setEventListeners();
+    // nasaApp.displayToday();
 }
 
 
