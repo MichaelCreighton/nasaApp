@@ -67,6 +67,7 @@ nasaApp.displayAnything = function(picObject) {
 
     const explain = document.createElement("p");
     explain.innerText = picObject.explanation;
+    explain.classList.add('explain');
 
     const confirmation = document.createElement("h3");
     confirmation.innerText = "Do You Like it?"
@@ -84,7 +85,7 @@ nasaApp.displayAnything = function(picObject) {
     eachPic.appendChild(image);
     eachPic.appendChild(hdLink);
     eachPic.appendChild(explain);
-    eachPic.appendChild(confirmation);
+    // eachPic.appendChild(confirmation);
     eachPic.appendChild(btn);
     
     document.querySelector("#spacePic").append(eachPic);
