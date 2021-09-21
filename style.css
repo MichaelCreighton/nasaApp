@@ -50,7 +50,10 @@ main {
     margin: 30px auto 50px auto;
 }
 #landingLogo img {
-    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 .gridContainer {
@@ -60,8 +63,10 @@ main {
     gap: 20px;
 }
 .gridContainer.onePic {
-    display: grid;
-    grid-template-columns: 1fr ;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;    
 }
 
 
@@ -80,9 +85,7 @@ label {
     padding: 20px;
     margin: 20px;    
 }
-/* .pic img {
-    min-height: 434px;
-} */
+
 .explain {
     max-height: 300px;
     overflow: auto;

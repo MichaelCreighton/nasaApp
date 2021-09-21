@@ -107,7 +107,8 @@ nasaApp.likeToggle = function (e) {
         
 
 // function display todays APOD 
-nasaApp.displayToday = function(picObject) {        
+nasaApp.displayToday = function(picObject) {    
+        
     // clear the html for new pics
     const clearHtml = document.querySelector("#spacePic");
     clearHtml.innerHTML = "";
@@ -117,6 +118,7 @@ nasaApp.displayToday = function(picObject) {
     const btn = document.getElementsByClassName("like");
     console.log(btn);
     
+    // add event listener
     btn[0].addEventListener('click', function(e) {
         nasaApp.likeToggle(e);
         
@@ -131,10 +133,12 @@ nasaApp.displayPics = function(arrayOfPicObjects) {
     const clearHtml = document.querySelector('#spacePic');
     clearHtml.innerHTML = '';
     document.getElementById("spacePic").classList.remove("onePic");
+
     // working with array of objects [{}, {}, {}]
     arrayOfPicObjects.forEach(picObject => {
         this.displayAnything(picObject);
     });
+    // add event listeners
     const btns = document.getElementsByClassName("like");
     for (let i = 0; i < btns.length; i++) {
       btns[i].addEventListener("click", function (e) {
@@ -156,7 +160,6 @@ nasaApp.setEventListeners = function () {
 
 nasaApp.init = function () {
     nasaApp.setEventListeners();
-    // nasaApp.displayToday();
 }
 
 
