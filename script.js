@@ -97,10 +97,10 @@ nasaApp.displayAnything = function(picObject) {
 
 nasaApp.likeToggle = function (e) {
     if(e.target.classList.contains('boom')) {
-        e.target.innerText = "I LIKE THIS!";
+        e.target.innerText = "I DON'T LIKE THIS!";
         e.target.classList.toggle('boom');
     } else {
-        e.target.innerText = "I DON'T LIKE THIS!";
+        e.target.innerText = "I LIKE THIS!";
         e.target.classList.toggle('boom');
     }
 };
@@ -108,7 +108,7 @@ nasaApp.likeToggle = function (e) {
 
 // function display todays APOD 
 nasaApp.displayToday = function(picObject) {    
-        
+
     // clear the html for new pics
     const clearHtml = document.querySelector("#spacePic");
     clearHtml.innerHTML = "";

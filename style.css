@@ -110,7 +110,8 @@ select:hover {
     cursor: pointer;
 }
 button.boom {
-    background: #000;
+    background: red;
+    color: #a7b4d1;
 }
 
 button:hover {
