@@ -38,97 +38,146 @@ nasaApp.getPics = function(query) {
 
 
 
-    nasaApp.displayAnything = function(picObject) {
+nasaApp.displayAnything = function(picObject) {
 
-        const title = document.createElement("h2");
-        title.innerText = picObject.title;
-
-
-        const date = document.createElement("p");
-        date.innerText = picObject.date;
+    const title = document.createElement("h2");
+    title.innerText = picObject.title;
 
 
-        const image = document.createElement("img");
-        if (typeof picObject.hdurl !== "undefined") {
-            image.src = picObject.url;
-        } else {
-            image.src = "./original.webp";
-        }
+    const date = document.createElement("p");
+    date.innerText = picObject.date;
 
-        const hdLink = document.createElement("a");
-        hdLink.innerText = "Click for Full Size or movie";
-        hdLink.target = "blank";
-        hdLink.rel = "noopener noreferer";
-        if (typeof picObject.hdurl !== "undefined") {
-            hdLink.href = picObject.hdurl;
-        } else {
-            hdLink.href = picObject.url;
-        }
 
-        const explain = document.createElement("p");
-        explain.innerText = picObject.explanation;
-
-        const confirmation = document.createElement("h3");
-        confirmation.innerText = "Do I Like it?"
-
-        const btn = document.createElement("button");
-        btn.classList.add("like");
-        // btn.innerHTML = '<i class="fa-solid fa-heart"></i>"';
-        btn.innerText = "LIKE THIS ONE?";
-        
-        const eachPic = document.createElement("div");
-        eachPic.classList.add("pic");
-
-        // add the new HTML to the page
-        eachPic.appendChild(title);
-        eachPic.appendChild(date);
-        eachPic.appendChild(image);
-        eachPic.appendChild(hdLink);
-        eachPic.appendChild(explain);
-        eachPic.appendChild(confirmation);
-        eachPic.appendChild(btn);
-        
-        document.querySelector("#spacePic").append(eachPic);
-
-        nasaApp.setLikeListeners();
+    const image = document.createElement("img");
+    if (typeof picObject.hdurl !== "undefined") {
+        image.src = picObject.url;
+    } else {
+        image.src = "./original.webp";
     }
+
+    const hdLink = document.createElement("a");
+    hdLink.innerText = "Click for Full Size or movie";
+    hdLink.target = "blank";
+    hdLink.rel = "noopener noreferer";
+    if (typeof picObject.hdurl !== "undefined") {
+        hdLink.href = picObject.hdurl;
+    } else {
+        hdLink.href = picObject.url;
+    }
+
+    const explain = document.createElement("p");
+    explain.innerText = picObject.explanation;
+
+    const confirmation = document.createElement("h3");
+    confirmation.innerText = "Do You Like it?"
+
+    const btn = document.createElement("button");
+    btn.classList.add("like");
+    btn.innerText = "LIKE THIS ONE?";
     
-    nasaApp.setLikeListeners = function() {
-        document.querySelectorAll(".like").forEach((like) =>
-          like.addEventListener("click", function (e) {
-            //   e.target.classList.toggle("boom");
-              if (e.target.classList.contains("boom")) {
-                  e.target.innerText = "YES, I LIKE THIS!";
-                //   e.target.classList.toggle("boom");
-              } else {
-                e.target.innerText = "NO, I DON'T LIKE THIS!";
-                // e.target.classList.toggle("boom");
-            }
-            e.target.classList.toggle("boom");
-        })
-            );
-    }
+    const eachPic = document.createElement("div");
+    eachPic.classList.add("pic");
 
-    nasaApp.likeToggle = function (e) {
-        if(e.target.classList.contains('boom')) {
-            e.target.innerText = "I LIKE THIS!";
-            e.target.classList.toggle('boom');
-        } else {
-            e.target.innerText = "I DON'T LIKE THIS!";
-            e.target.classList.toggle('boom');
-        }
-    };
+    // add the new HTML to the page
+    eachPic.appendChild(title);
+    eachPic.appendChild(date);
+    eachPic.appendChild(image);
+    eachPic.appendChild(hdLink);
+    eachPic.appendChild(explain);
+    eachPic.appendChild(confirmation);
+    eachPic.appendChild(btn);
+    
+    document.querySelector("#spacePic").append(eachPic);
+
+}
+   
+
+// nasaApp.setLikeListeners = function() {
+//     const btns = document.getElementsByClassName('like');
+//     for (let i =0 ; i < btns.length; i++) {
+//         btns[i].addEventListener('click', function() {
+//             console.log('like clicked');
+            
+//         });
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+// nasaApp.setLikeListeners = function() {
+//     const likeWrapper = document.getElementById('spacePic');
+
+//     likeWrapper.addEventListener("click", (e) => {
+//       const isButton = e.target.nodeName === 'BUTTON';
+//       if(!isButton) {
+//           return;
+//       }
+//       console.log(this);
+      
+//     });
+// }
+
+
+
+
+
+
+
+// nasaApp.setLikeListeners = function() {
+//     document.querySelectorAll(".like").forEach((like) =>
+//         like.addEventListener("click", function (e) {
+//         //   e.target.classList.toggle("boom");
+//             if (e.target.classList.contains("boom")) {
+//                 e.target.innerText = "YES, I LIKE THIS!";
+//                 console.log("like");
+                
+//             //   e.target.classList.toggle("boom");
+//             } else {
+//             e.target.innerText = "NO, I DON'T LIKE THIS!";
+//             console.log("dont like");
+            
+//             // e.target.classList.toggle("boom");
+//         }
+//         e.target.classList.toggle("boom");
+//     })
+//         );
+// }
+
+nasaApp.likeToggle = function (e) {
+    if(e.target.classList.contains('boom')) {
+        e.target.innerText = "I LIKE THIS!";
+        e.target.classList.toggle('boom');
+    } else {
+        e.target.innerText = "I DON'T LIKE THIS!";
+        e.target.classList.toggle('boom');
+    }
+};
         
 
-    // function display todays APOD 
-    nasaApp.displayToday = function(picObject) {        
-      // clear the html for new pics
-      const clearHtml = document.querySelector("#spacePic");
-      clearHtml.innerHTML = "";
-        document.getElementById('spacePic').classList.add('onePic');
+// function display todays APOD 
+nasaApp.displayToday = function(picObject) {        
+    // clear the html for new pics
+    const clearHtml = document.querySelector("#spacePic");
+    clearHtml.innerHTML = "";
+    document.getElementById('spacePic').classList.add('onePic');
 
-      this.displayAnything(picObject);
-    }
+    this.displayAnything(picObject);
+    const btn = document.getElementsByClassName("like");
+    console.log(btn);
+    
+    btn[0].addEventListener('click', function(e) {
+        nasaApp.likeToggle(e);
+        
+    })
+}
 
 
 //  function to display the info from all random APOD objects
@@ -142,7 +191,12 @@ nasaApp.displayPics = function(arrayOfPicObjects) {
     arrayOfPicObjects.forEach(picObject => {
         this.displayAnything(picObject);
     });
-
+    const btns = document.getElementsByClassName("like");
+    for (let i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function (e) {
+        nasaApp.likeToggle(e);
+      });
+    }
 }
 
 
