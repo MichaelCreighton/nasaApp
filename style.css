@@ -88,12 +88,15 @@ select {
     border: 3px solid #a7b4d1;    
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
+select:hover {
+    cursor: pointer;
+}
 button.boom {
     background: #000;
 }
 
 button:hover {
+    cursor: pointer;
     border: solid 3px red;
     background: red;
     color: #a7b4d1;

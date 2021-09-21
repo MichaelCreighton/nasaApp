@@ -90,66 +90,7 @@ nasaApp.displayAnything = function(picObject) {
     document.querySelector("#spacePic").append(eachPic);
 
 }
-   
 
-// nasaApp.setLikeListeners = function() {
-//     const btns = document.getElementsByClassName('like');
-//     for (let i =0 ; i < btns.length; i++) {
-//         btns[i].addEventListener('click', function() {
-//             console.log('like clicked');
-            
-//         });
-//     }
-// }
-
-
-
-
-
-
-
-
-
-
-
-// nasaApp.setLikeListeners = function() {
-//     const likeWrapper = document.getElementById('spacePic');
-
-//     likeWrapper.addEventListener("click", (e) => {
-//       const isButton = e.target.nodeName === 'BUTTON';
-//       if(!isButton) {
-//           return;
-//       }
-//       console.log(this);
-      
-//     });
-// }
-
-
-
-
-
-
-
-// nasaApp.setLikeListeners = function() {
-//     document.querySelectorAll(".like").forEach((like) =>
-//         like.addEventListener("click", function (e) {
-//         //   e.target.classList.toggle("boom");
-//             if (e.target.classList.contains("boom")) {
-//                 e.target.innerText = "YES, I LIKE THIS!";
-//                 console.log("like");
-                
-//             //   e.target.classList.toggle("boom");
-//             } else {
-//             e.target.innerText = "NO, I DON'T LIKE THIS!";
-//             console.log("dont like");
-            
-//             // e.target.classList.toggle("boom");
-//         }
-//         e.target.classList.toggle("boom");
-//     })
-//         );
-// }
 
 nasaApp.likeToggle = function (e) {
     if(e.target.classList.contains('boom')) {
