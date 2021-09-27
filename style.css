@@ -16,9 +16,18 @@ body {
     color: #a7b4d1;
     padding-top: 30px;
 }
+a, h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
 a {
     color: red;
     font-size: 1rem;
+}
+h4 {
+    color: red;
+    font-size: 2rem;
+    
 }
 h3 {
     font-size: 2rem;
@@ -26,7 +35,12 @@ h3 {
     color: red;
 }
 
-
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30px;
+}
 main {
         position: relative;
     color: #a7b4d1;
@@ -95,6 +109,7 @@ label {
 
 button,
 select {
+    appearance: none;
     background: #a7b4d1;
     color: red;
     text-align: center;
@@ -106,6 +121,7 @@ select {
     border: 3px solid #a7b4d1;    
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 select:hover {
     cursor: pointer;
 }
