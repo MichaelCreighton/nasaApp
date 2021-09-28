@@ -151,7 +151,9 @@ nasaApp.displayPics = function(arrayOfPicObjects) {
 nasaApp.setEventListeners = function () {
   document.querySelector("#choice").addEventListener("click", function () {
     const choice = this.value;
+    const reset = document.getElementById("choice");
     nasaApp.getPics(choice);
+    reset.selectedIndex = 0;
   });
 
   
