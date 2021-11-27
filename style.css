@@ -27,7 +27,6 @@ a {
 h4 {
     color: red;
     font-size: 2rem;
-    
 }
 h3 {
     font-size: 2rem;
@@ -42,7 +41,7 @@ h3 {
     margin: 0 30px;
 }
 main {
-        position: relative;
+    position: relative;
     color: #a7b4d1;
     padding-top: 25px;
     font-size: 1.1rem;
@@ -58,20 +57,19 @@ main {
 
 .nasaLogo {
     display: block;
-    width: 50%;
+    width: 40%;
     margin: 30px auto 50px auto;
 }
 #landingLogo img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    margin: 0 auto;
+    width: 40%;
+    padding-top: 100px;
 }
 
 .gridContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* grid-template-rows: 400px; */
     gap: 20px;
 }
 .gridContainer.onePic {
@@ -99,7 +97,8 @@ label {
 }
 
 .explain {
-    max-height: 300px;
+    
+    max-height: 250px;
     overflow: auto;
     scroll-margin: 1px;
     font-size: .8rem;
@@ -107,7 +106,6 @@ label {
 }
 
 
-button,
 select {
 
     background: #a7b4d1;
@@ -125,29 +123,32 @@ select {
 select:hover {
     cursor: pointer;
 }
-button.boom {
-    background: red;
-    color: #a7b4d1;
-}
 
-button:hover {
-    cursor: pointer;
-    border: solid 3px red;
-    background: red;
-    color: #a7b4d1;
-}
-button:active {
-    transform:  scale(1.4);
-}
 .pic img {
     width: 100%;
     display: block;
     border-radius: 10px;
 }
-/* pic i {
-    font-size: 1rem;
-    color: #a7b4d1;
-} */
+
 #spacePic button {
     margin: 20px 20px;
 }
+
+.fa-heart {
+    padding: 20px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.fa-heart:hover {
+    cursor: pointer;
+}
+
+.big-heart {
+    opacity: 1;
+    font-size: 2rem;
+    color: red;
+    transform: scale(2) ;
+    transition:  0.5s;
+    padding: 13px;
+}
+
