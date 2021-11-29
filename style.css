@@ -283,7 +283,7 @@ main {
 .nasaLogo {
   display: block;
   width: 40%;
-  margin: 30px auto 50px auto;
+  margin: 50px auto 50px auto;
 }
 
 #landingLogo img {
@@ -401,6 +401,14 @@ select:hover {
  }
 
  @media all and (max-width: 600px) {
+
+  .top {
+  flex-direction: column;
+  }
+  .logo {
+    margin-bottom: 5px;
+  }
+
    h2 {
      font-size: 1.6rem;
    }
