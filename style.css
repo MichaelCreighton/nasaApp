@@ -289,7 +289,7 @@ main {
 #landingLogo img {
   display: block;
   margin: 0 auto;
-  width: 40%;
+  width: 80%;
   padding-top: 100px;
 }
 
@@ -303,7 +303,7 @@ main {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 90%;
 }
 
 label {
@@ -390,6 +390,12 @@ select:hover {
  }
 
  @media all and (max-width: 900px) {
+   .top {
+  flex-direction: column;
+  }
+  .logo {
+    margin-bottom: 5px;
+  }
 
    .gridContainer {
      grid-template-columns: 1fr;
@@ -402,12 +408,12 @@ select:hover {
 
  @media all and (max-width: 600px) {
 
-  .top {
+  /* .top {
   flex-direction: column;
   }
   .logo {
     margin-bottom: 5px;
-  }
+  } */
 
    h2 {
      font-size: 1.6rem;
