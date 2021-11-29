@@ -290,7 +290,6 @@ main {
   display: block;
   margin: 0 auto;
   width: 80%;
-  padding-top: 100px;
 }
 
 .gridContainer {
@@ -376,6 +375,8 @@ select:hover {
   transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   padding: 13px;
 }
+
+
  /* media queries  */
 
  @media all and (max-width: 1300px) {
@@ -383,10 +384,6 @@ select:hover {
    .gridContainer {
     grid-template-columns: 1fr 1fr;
    }
-
-   /* .gridContainer.onePic {
-     width: 70%;
-   } */
  }
 
  @media all and (max-width: 900px) {
@@ -407,13 +404,6 @@ select:hover {
  }
 
  @media all and (max-width: 600px) {
-
-  /* .top {
-  flex-direction: column;
-  }
-  .logo {
-    margin-bottom: 5px;
-  } */
 
    h2 {
      font-size: 1.6rem;
