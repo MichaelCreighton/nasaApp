@@ -130,7 +130,7 @@ nasaApp.displayPics = function (arrayOfPicObjects) {
 };
 
 nasaApp.setEventListeners = function () {
-  document.querySelector("#choice").addEventListener("click", function () {
+  document.querySelector("#choice").addEventListener("input", function () {
     const choice = this.value;
     const reset = document.getElementById("choice");
     nasaApp.getPics(choice);
