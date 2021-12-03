@@ -33,6 +33,7 @@ nasaApp.getPics = function (query) {
     });
 };
 
+//function used to display each pic with info
 nasaApp.displayAnything = function (picObject) {
   const clearLanding = document.querySelector("#landingLogo");
   clearLanding.innerHTML = "";
@@ -94,8 +95,6 @@ nasaApp.displayToday = function (picObject) {
   document.getElementById("spacePic").classList.add("onePic");
 
   this.displayAnything(picObject);
-  //   const btn = document.getElementsByClassName("like");
-  //   console.log(btn);
   const heart = document.getElementsByClassName("fas");
   console.log(heart[0]);
 
@@ -103,10 +102,6 @@ nasaApp.displayToday = function (picObject) {
   heart[0].addEventListener("click", function (e) {
     nasaApp.likeToggle(e);
   });
-};
-
-nasaApp.likeToggle = function (e) {
-  e.target.classList.toggle("big-heart");
 };
 
 //  function to display the info from all random APOD objects
@@ -120,7 +115,7 @@ nasaApp.displayPics = function (arrayOfPicObjects) {
   arrayOfPicObjects.forEach((picObject) => {
     this.displayAnything(picObject);
   });
-  // add event listeners
+  // add event listener to heart
   const hearts = document.getElementsByClassName("fas");
   for (let i = 0; i < hearts.length; i++) {
     hearts[i].addEventListener("click", function (e) {
@@ -129,6 +124,12 @@ nasaApp.displayPics = function (arrayOfPicObjects) {
   }
 };
 
+// heart animation toggle for likes
+nasaApp.likeToggle = function (e) {
+  e.target.classList.toggle("big-heart");
+};
+
+// watch for user input on dropdown
 nasaApp.setEventListeners = function () {
   document.querySelector("#choice").addEventListener("input", function () {
     const choice = this.value;

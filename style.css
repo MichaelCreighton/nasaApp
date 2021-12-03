@@ -229,6 +229,7 @@ body {
   background: #202f52;
   color: #a7b4d1;
   padding-top: 30px;
+  height: 100vh;
 }
 a,
 h1,
@@ -266,7 +267,13 @@ h3 {
 }
 
 main {
-  position: relative;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 85vh;
+
   color: #a7b4d1;
   padding-top: 25px;
   font-size: 1.1rem;
@@ -280,16 +287,24 @@ main {
   margin: 0 auto;
 }
 
+/* .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 85vh;
+} */
+
 .nasaLogo {
   display: block;
-  width: 40%;
+  width: 60%;
   margin: 50px auto 50px auto;
 }
 
 #landingLogo img {
   display: block;
   margin: 0 auto;
-  width: 80%;
+  width: 60%;
 }
 
 .gridContainer {
@@ -302,7 +317,8 @@ main {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 50%;
+  height: 60vh;
 }
 
 label {
@@ -320,6 +336,9 @@ label {
   box-shadow: 0px 0px 20px #a7b4d1;
   padding: 20px;
   margin: 20px;
+}
+
+.onePic {
 }
 
 .explain {
@@ -376,41 +395,44 @@ select:hover {
   padding: 13px;
 }
 
+footer {
+  text-align: center;
+  color: red;
+  font-size: 1rem;
+}
 
- /* media queries  */
+/* media queries  */
 
- @media all and (max-width: 1300px) {
-
-   .gridContainer {
+@media all and (max-width: 1300px) {
+  .gridContainer {
     grid-template-columns: 1fr 1fr;
-   }
- }
+  }
+}
 
- @media all and (max-width: 900px) {
-   .top {
-  flex-direction: column;
+@media all and (max-width: 900px) {
+  .top {
+    flex-direction: column;
   }
   .logo {
     margin-bottom: 5px;
   }
 
-   .gridContainer {
-     grid-template-columns: 1fr;
-   }
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
 
-   h2 {
-     font-size: 2rem;
-   }
- }
+  h2 {
+    font-size: 2rem;
+  }
+}
 
- @media all and (max-width: 600px) {
-
-   h2 {
-     font-size: 1.6rem;
-   }
- }
- @media all and (max-width: 400px) {
-   h2 {
-     font-size: 1.3rem;
-   }
- }
+@media all and (max-width: 600px) {
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+@media all and (max-width: 400px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+}
